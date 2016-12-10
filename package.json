@@ -1,0 +1,75 @@
+{
+    "author": "Prakash",
+    "dependencies": {
+        "pebble-clay": "^1.0.2"
+    },
+    "keywords": [],
+    "name": "healthify",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "configurable",
+            "health"
+        ],
+        "displayName": "Healthify",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "TEMPERATURE",
+            "CONDITIONS",
+            "DATE_TIME_FORMAT[2]",
+            "DAY_OF_WEEK",
+            "WEATHER_REFRESH",
+            "BT_VIBR[2]",
+            "DIST_TEMP_UNIT[2]",
+            "HEALTH_AUTO",
+            "HEALTH_REFRESH",
+            "HEALTH_SHAKE",
+            "UPPER_COLOR[3]",
+            "LOWER_COLOR[3]",
+            "ICON_COLOR[3]",
+            "TEXT_COLOR[3]",
+            "SEP_COLOR[3]",
+            "HEALTH_FIX_LAYER",
+            "HEALTH_REALTIME",
+            "WEATHER_USE_GPS",
+            "WEATHER_LOC_NAME",
+            "WEATHER_ENABLE"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/THUMB",
+                    "menuIcon": true,
+                    "name": "THUMB",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/HEALTH_WHITE",
+                    "name": "HEALTH_WHITE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/HEALTH_BLACK",
+                    "name": "HEALTH_BLACK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite",
+            "emery"
+        ],
+        "uuid": "7ee97b2c-95e8-4720-b94e-70fccd905d98",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "3.5.0"
+}
