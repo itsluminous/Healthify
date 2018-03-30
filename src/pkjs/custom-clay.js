@@ -36,7 +36,7 @@ module.exports = function(minified) {
   }  
   
   function redirectDonate() {    
-    window.location = "https://www.paypal.me/prakashait/10";
+    window.location = "https://www.paypal.me/prakashait/0.99";
   }  
 
   clayConfig.on(clayConfig.EVENTS.AFTER_BUILD, function() {

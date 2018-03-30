@@ -19,14 +19,14 @@ function isNotEmpty(str) {
 
 function requestWeather(url){
   // Send request to OpenWeatherMap
-  //console.log(url);
+  console.log('url : ' + url);
   xhrRequest(url, 'GET', 
     function(responseText) {
       var dictionary;
       try{
         // responseText contains a JSON object with weather info
         var json = JSON.parse(responseText);
-        //console.log(responseText);
+        console.log('response : ' + responseText);
   
         // Temperature in Kelvin requires adjustment
         var temperature = Math.round(json.main.temp - 273.15);
@@ -50,6 +50,8 @@ function requestWeather(url){
       Pebble.sendAppMessage(dictionary,
         function(e) {
           console.log('Weather info sent to Pebble successfully!');
+          console.log('url : ' + url);
+          console.log('response : ' + responseText);
         },
         function(e) {
           console.log('Error sending weather info to Pebble!');
@@ -84,7 +86,8 @@ function locationError(err) {
 }
 
 function customLocationWeather(loc) {
-  var url = 'http://api.openweathermap.org/data/2.5/weather?q={' + loc + '}&appid=993a0dee29cb3e497032ae692aeadbb4';
+  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + loc + '&appid=993a0dee29cb3e497032ae692aeadbb4';
+  console.log(url);
   requestWeather(url);
 }
 
@@ -98,7 +101,7 @@ function getWeather(useGPS, customLocation) {
       locationError,
       {timeout: 15000, maximumAge: 60000}
     );
-  }
+  }  
 }
 
 Pebble.addEventListener('appmessage',function(e) {

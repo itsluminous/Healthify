@@ -475,11 +475,12 @@ void update_health(bool forced) {
 	//APP_LOG(APP_LOG_LEVEL_WARNING , "Exit : update_health");
 }
 
-void update_weather(bool forced) {  
+void update_weather(bool forced) { 
+  //forced = true;
   //APP_LOG(APP_LOG_LEVEL_INFO , "Method : update_weather");
   persist_read_data(WEATHER_SETTINGS_KEY, &weatherSettings, sizeof(weatherSettings));
   int difference = difftime(time(NULL),weatherSettings.temp_last_updated);
-  //APP_LOG(APP_LOG_LEVEL_DEBUG, "weather Difference %d",difference);
+  APP_LOG(APP_LOG_LEVEL_DEBUG, "weather Difference %d",difference);
   if(settings.weather_enable && bt_connected){    
   	if(forced || (difference >= settings.weather_refresh*60)) {
       text_layer_set_text(weather_layer, "pebble");
