@@ -4,9 +4,7 @@ Healthify
 This is the source repository for the Pebble Watchface "Healthify"
 
 The app can be found in the store:
-    Public Web Link : https://apps.getpebble.com/applications/57caac70be5ad0a9cf000167
-    Deep Link : pebble://appstore/57caac70be5ad0a9cf000167
-
+    Public Web Link : https://apps.rebble.io/en_US/application/57caac70be5ad0a9cf000167?query=healthify&section=watchfaces
 
 Features of this Watchface:
 
