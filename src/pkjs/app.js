@@ -61,7 +61,7 @@ function requestWeather(url){
 function locationSuccess(pos) {
   // Construct URL
   var url = 'http://api.openweathermap.org/data/2.5/weather?lat=' +
-      pos.coords.latitude + '&lon=' + pos.coords.longitude + '&appid=993a0dee29cb3e497032ae692aeadbb4';
+      pos.coords.latitude + '&lon=' + pos.coords.longitude + '&appid=yourapikeyhere';
   requestWeather(url);  
 }
 
@@ -83,7 +83,7 @@ function locationError(err) {
 }
 
 function customLocationWeather(loc) {
-  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + loc + '&appid=993a0dee29cb3e497032ae692aeadbb4';
+  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + loc + '&appid=yourapikeyhere';
   requestWeather(url);
 }
 
